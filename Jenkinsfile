@@ -3,6 +3,7 @@ pipeline {
     environment {
         ECR_REGISTRY = "129516034219.dkr.ecr.us-east-1.amazonaws.com"
         APP_REPO_NAME= "deniz-repo/todo-app"
+        PATH="/usr/local/bin/:${env.PATH}"
     }
     stages {
         stage("Run app on Docker"){
